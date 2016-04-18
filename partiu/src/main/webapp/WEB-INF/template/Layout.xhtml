@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title><ui:insert name="titulo">Sistema Financeiro</ui:insert>
+	</title>
+	<h:outputStylesheet library="algaworks" name="styles/estilo.css" />
+</h:head>
+<h:body>
+	<header>
+		<h:graphicImage library="algaworks" name="images/logo.png" />
+	</header>
+
+	<h:form>
+		<p:menubar style="margin-top: -20px; margin-bottom: 20px">
+			<p:menuitem value="Home" url="http://www.primefaces.org"/> 
+			<p:menuitem value="Sobre" url="http://www.primefaces.org"/> 
+			<p:menuitem value="Faça seu cadastro" url="Cadastro.xhtml"/> 
+			<p:menuitem value="Contato" url="http://www.primefaces.org"/> 
+			<p:menuitem value="Baixe o app Android" url="http://www.primefaces.org"/> 
+			<p:menuitem value="Login" url="Login.xhtml"  ajax="false" />  
+		</p:menubar>
+	</h:form>
+	<div id="conteudo">
+		<ui:insert name="corpo" />
+	</div>
+	<footer> Sistema Financeiro - AlgaWorks </footer>
+</h:body>
+</html>

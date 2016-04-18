@@ -1,0 +1,7 @@
+br\com\partiu\controle\LoginBean.class
+br\com\partiu\modelo\Cliente.class
+br\com\partiu\modelo\Reserva.class
+br\com\partiu\modelo\Usuario.class
+br\com\partiu\modelo\Gerente.class
+br\com\partiu\modelo\Avalia.class
+br\com\partiu\modelo\Estabelecimento.class

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/template/Layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="titulo">Partiu</ui:define>
+	<ui:define name="corpo">
+		<h1>Faça seu Cadastro</h1>
+		<h:form id="frm">
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputText value="Nome do responsável pelo estabelecimento: " /><br/>
+				<p:inputText name="nome" id="nome" /><br/>
+				<h:outputText value="Login: " /><br/>
+				<p:inputText name="login" id="login" /><br/>
+				<h:outputText value="E-mail: " /><br/>
+				<p:inputText name="email" id="email" /><br/>
+				<h:outputText value="Nome do estabelecimento: " /><br/>
+				<p:inputText name="nome-estab" id="nome-estab" /><br/>
+				<h:outputText value="Telefone: " /><br/>
+				<p:inputText name="tel" id="tel" /><br/>
+				<h:outputText value="CEP: " /><br/>
+				<p:inputText name="cep" id="cep" /><br/>
+				<h:outputText value="Lagradouro" /><br/>
+				<h:outputText value="Número: " /><br/>
+				<p:inputText name="numero" id="numero" /><br/>
+				<h:outputText value="Complemento: " /><br/>
+				<p:inputText name="complemento" id="complemento" /><br/>
+				<h:outputText value="Estado:" /><br/>
+				<p:inputText name="estado" id="estado" /><br/>
+				<h:outputText value="Cidade" /><br/>
+				<p:inputText name="cidade" id="cidade" /><br/>
+				
+				<h:outputText value="Aceitar reservas via App:" /><br/>
+				  <p:selectOneRadio id="console" value="#{radioView.reserva}">
+           			 <f:selectItem itemLabel="Sim" itemValue="sim" />
+            		 <f:selectItem itemLabel="Não" itemValue="nao" />
+       			 </p:selectOneRadio>
+        		 
+        		 <br />
+        		 <h:outputText value="Especialidades:" /><br/>
+				 <h:outputText value="Mexicana: " />
+        		<p:selectBooleanCheckbox value="#{selectBooleanView.mexicana}" />
+				
+				<h:outputText value="Senha: " /><br/>
+				<p:password id="senha" name="senha"/> <br/>
+				<h:outputText value="Confirmar Senha: " /><br/>
+				<p:password id="conf-senha" name="conf-senha"/> <br/>
+				<p:commandButton value="Logar" actionListener="#{loginBean.autenticar}" type="submit"/>
+  				<h:outputText value="#{loginBean.login}" />
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
